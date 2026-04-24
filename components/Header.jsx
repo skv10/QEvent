@@ -76,13 +76,15 @@ const Header = () => {
             <p>Tags</p>
           </Link>
 
-          <Link
-            href={"/create-event"}
-            className="flex items-center justify-center gap-2 hover:text-primary hover:scale-105 hover:underline-offset-8 hover:underline transition-all"
-          >
-            <div className="scale-110">{/* <TfiTicket /> */}</div>
-            <p>Create Event</p>
-          </Link>
+          {loginSession && (
+            <Link
+              href={"/create-event"}
+              className="flex items-center justify-center gap-2 hover:text-primary hover:scale-105 hover:underline-offset-8 hover:underline transition-all"
+            >
+              <div className="scale-110">{/* <TfiTicket /> */}</div>
+              <p>Create Event</p>
+            </Link>
+          )}
 
           {loginSession ? (
             <button
